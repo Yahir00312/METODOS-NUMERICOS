@@ -1,0 +1,64 @@
+#######   VALORES NUMERICOS   #######
+
+## DIGITOS ENTEROS Y FRACCIONES ##
+
+
+# Manejo de la representacion numerica con lenguaje R a traves de funciones, las representaciones pueden ser con:
+# el signo igual(=) o con las teclas (<-)
+# Para representar cualquier cantidad y a como una variable se escribe:
+
+a = 6384671
+
+# Para que R, nos regrese el valor almacenado en la variable a, solo escribimos a y Enter
+
+a
+         
+
+# Si lo que deseamos es guardar un numero fraccionario, escribimos:
+
+b <- 0.5342198
+
+# Y para desplegar el valor, se escribe b y Enter
+
+b
+
+# Tambien, se pueden realizar operaciones con los valores y obtener el resultado
+# Por ejemplo dividir un entero entre un valor real (con punto decimal)
+
+1/3.0
+
+# Se puede observar que el resultado nos regresa 7 decimales, pero se puede modificar esa cantidad de decimales
+# Usando la funcion options() y el modificador digits = n; donde n es la cantidad de decimales
+
+options(digits=3)
+1/3.0
+
+# La cantidad de decimales permanece con esa cantidad hasta que se modifique o se reinicie R 
+
+options(digits=7)
+1/3.0
+
+
+## REDONDEO ##
+
+# La funcion round(x,n); donde x es el valor y n es la cantidad de decimales, sin n es sin decimales
+# Si tenemos que un valor de 54.2 y lo redondeamos, obtenemos:
+
+round(54.2)
+
+# Si escribimos una cantidad con mas decimales y le pedimos un numero particular de decimales, 
+# nos proporcionara ese numero de decimales solicitado y redondeado con el siguiente digito.
+
+round(97.5684197, 2)
+
+## DIGITOS SIGNIFICATIVOS ##
+
+# signif(x,n) redondea a x, con n digitos significativos (default n=6)
+
+signif(27.384956102)
+
+signif(39.6429304521, 5)
+
+signif(61.378045912, 2)
+
+signif(316.6971243547, 3)
